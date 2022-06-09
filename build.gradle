@@ -2,7 +2,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 
 [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
-sourceCompatibility = '1.8'
+sourceCompatibility = 11
 
 // to get project version from command line, just type
 // $ gradle -PprojVersion=<version_number> build
@@ -10,7 +10,7 @@ sourceCompatibility = '1.8'
 if (project.hasProperty('projVersion')) {
       project.version = project.projVersion
 } else {
-      project.version = '0.9-beta'
+      project.version = '0.9-alpha'
 }
 
 // name with versioning of the jar file
@@ -64,10 +64,10 @@ dependencies {
     
     // OMS annotation
     // https://mvnrepository.com/artifact/org.jgrasstools/jgt-oms3
-    compile group: 'org.jgrasstools', name: 'jgt-oms3', version: '0.7.8'
+    //compile group: 'org.hortonmachine', name: 'jgt-oms3', version: '0.7.8'
     
     // https://mvnrepository.com/artifact/org.jgrasstools/jgt-jgrassgears
-    compile group: 'org.jgrasstools', name: 'jgt-jgrassgears', version: '0.7.8'
+    compile group: 'org.hortonmachine', name: 'hm-gears', version: '0.10.4'
     
     // https://mvnrepository.com/artifact/edu.ucar/netcdf
 	compile group: 'edu.ucar', name: 'netcdf', version: '4.3.22'

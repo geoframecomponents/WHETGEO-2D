@@ -19,7 +19,7 @@
 
 package it.geoframe.blogspot.whetgeo2d.richardssolver;
 
-import static org.jgrasstools.gears.libs.modules.JGTConstants.isNovalue;
+import static org.hortonmachine.gears.libs.modules.HMConstants.isNovalue;
 
 import java.util.List;
 import java.util.ArrayList;
