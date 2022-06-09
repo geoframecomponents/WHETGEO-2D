@@ -136,7 +136,9 @@ public class Richards2DFiniteVolumeSolver {
 			if(topology.edgeRightNeighbour.get(edge)==0) {
 				
 				if(topology.edgesBoundaryBCType.get(edge)==1) {
-					
+					/*
+					 * FIXME: scalar product between edge and flux
+					 */
 					sideFlux = this.timeDelta*geometry.edgesLength.get(edge)*inBC.get(topology.edgesBoundaryBCValue.get(edge))[0];
 //					rhs.set(topology.edgeLeftNeighbour.get(edge), rhs.get(topology.edgeLeftNeighbour.get(edge))+sideFlux);
 					mainDiagonalEntry = 0.0;
